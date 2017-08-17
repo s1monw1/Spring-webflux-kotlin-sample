@@ -9,6 +9,8 @@ import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.router
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import reactor.core.publisher.toFlux
+import reactor.core.publisher.toMono
 
 @Configuration
 class RoutingConfiguration {
@@ -32,9 +34,9 @@ class RoutingConfiguration {
 class ReactiveHandler {
 
     fun getText(): Mono<String> =
-            Mono.just<Any>("xWorld").map { "Hello $it!" }
+            ("xWorld").toMono().map { "Hello $it!" }
 
     fun getManyTexts(): Flux<String> {
-        return Flux.fromArray(arrayOf("first", "second", "third")).map { s -> s.toUpperCase() }
+        return arrayOf("first", "second", "third").toFlux().map { s -> s.toUpperCase() }
     }
 }
