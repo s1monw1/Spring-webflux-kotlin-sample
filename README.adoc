@@ -1,0 +1,6 @@
+= SpringWebFluxKotlin
+Spring Boot 2.0 Application with WebFlux configured via Kotlin DSL
+
+
+Making use of https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0[Kotlin features in Spring 5.0].
+https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework[WebFlux] is a new web framework introduced to create reactive web services.
