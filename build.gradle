@@ -39,6 +39,11 @@ repositories {
 
 
 dependencies {
+	compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.1'
+	compile group: 'org.twitter4j', name: 'twitter4j-stream', version: '4.0.6'
+
+
+
 	compile('org.springframework.boot:spring-boot-starter-webflux')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
