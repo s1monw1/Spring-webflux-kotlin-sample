@@ -1,6 +1,5 @@
 package de.swirtz.springwebflux
 
-import org.slf4j.LoggerFactory
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
@@ -10,13 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
  * and implements the Reactive Streams specification through the Reactor project.
  */
 @SpringBootApplication
-class SpringwebfluxKotlinDemoApplication {
-
-    companion object {
-        val LOG = LoggerFactory.getLogger(SpringwebfluxKotlinDemoApplication::class.java)
-    }
-
-}
+class SpringwebfluxKotlinDemoApplication
 
 fun main(args: Array<String>) {
     SpringApplication.run(SpringwebfluxKotlinDemoApplication::class.java, *args)
