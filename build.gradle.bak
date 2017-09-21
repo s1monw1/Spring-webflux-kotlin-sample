@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.1.4-2'
+		kotlinVersion = '1.1.4-3'
 		springBootVersion = '2.0.0.M3'
 	}
 	repositories {
@@ -24,12 +24,6 @@ apply plugin: 'io.spring.dependency-management'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-compileKotlin {
-	kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-	kotlinOptions.jvmTarget = "1.8"
-}
 
 repositories {
 	mavenCentral()
@@ -39,11 +33,6 @@ repositories {
 
 
 dependencies {
-	compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.1'
-	compile group: 'org.twitter4j', name: 'twitter4j-stream', version: '4.0.6'
-
-
-
 	compile('org.springframework.boot:spring-boot-starter-webflux')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")

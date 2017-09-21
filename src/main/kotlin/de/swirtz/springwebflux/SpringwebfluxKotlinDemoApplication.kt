@@ -13,5 +13,7 @@ class SpringwebfluxKotlinDemoApplication
 
 fun main(args: Array<String>) {
     SpringApplication.run(SpringwebfluxKotlinDemoApplication::class.java, *args)
+
 }
+
 
