@@ -5,7 +5,7 @@ val kotlinVersion: String by extra
 val springBootVersion: String by extra
 
 buildscript {
-    val kotlinVersion by extra { "1.1.4-3" }
+    val kotlinVersion by extra { "1.1.51" }
     val springBootVersion by extra { "2.0.0.M4" }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
@@ -35,7 +35,7 @@ tasks {
 
 
 plugins {
-    val kotlinVersion = "1.1.4-3"
+    val kotlinVersion = "1.1.51"
     id("org.springframework.boot").version("1.5.7.RELEASE")
     id("io.spring.dependency-management").version("1.0.3.RELEASE")
     id("org.jetbrains.kotlin.plugin.spring").version(kotlinVersion)

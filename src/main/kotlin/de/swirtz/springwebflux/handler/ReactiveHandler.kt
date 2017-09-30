@@ -13,9 +13,6 @@ class ReactiveHandler {
     @Autowired
     lateinit var repo: StringRepo
 
-    @Autowired
-    lateinit var environment : Environment
-
     fun getText(search: String): Mono<String> = repo.get(search).toMono().map { "Result: $it!" }
     fun addText(text: String): Mono<String> = repo.add(text).toMono().map { "Result: $it!" }
     fun getAllTexts(): Flux<String> = repo.getAll().toFlux().map { "Result: $it" }

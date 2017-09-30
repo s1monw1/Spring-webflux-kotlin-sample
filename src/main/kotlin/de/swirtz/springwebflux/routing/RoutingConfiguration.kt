@@ -35,11 +35,5 @@ class RoutingConfiguration {
                     }
                 }
             }
-
-
-
-
-
-
 }
 
