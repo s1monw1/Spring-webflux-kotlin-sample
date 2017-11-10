@@ -1,9 +1,7 @@
 package de.swirtz.springwebflux
 
-import org.springframework.boot.runApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.boot.runApplication
 
 /**
  * Spring WebFlux is the new reactive web framework introduced in Spring Framework 5.0.
@@ -17,7 +15,3 @@ fun main(args: Array<String>) {
     runApplication<WebfluxKotlinDemoApplication>(*args)
 }
 
-
-@RequestMapping("/")
-@RestController
-class IndexController
