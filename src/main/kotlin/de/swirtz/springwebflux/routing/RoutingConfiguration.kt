@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.router
 
@@ -20,18 +21,14 @@ class RoutingConfiguration {
             val savePathName = "save"
             GET("/{$searchPathName}") { req ->
                 val pathVar = req.pathVariable(searchPathName)
-                ServerResponse.ok().body(
-                        handler.getName(pathVar)
-                )
+                ok().body(handler.getName(pathVar))
             }
             GET("/") {
-                ServerResponse.ok().body(handler.getAllNames())
+                ok().body(handler.getAllNames())
             }
             PUT("/{$savePathName}") { req ->
                 val pathVar = req.pathVariable(savePathName)
-                ServerResponse.ok().body(
-                        handler.addName(pathVar)
-                )
+                ok().body(handler.addName(pathVar))
             }
         }
     }

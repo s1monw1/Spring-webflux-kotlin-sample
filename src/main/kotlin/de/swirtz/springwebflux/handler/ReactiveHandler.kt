@@ -2,6 +2,7 @@ package de.swirtz.springwebflux.handler
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
+import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.publisher.toFlux
@@ -17,7 +18,7 @@ class ReactiveHandler {
     fun getAllNames(): Flux<String> = repo.getAll().toFlux().map { "Result: $it" }
 }
 
-@Component
+@Repository
 class NamesRepo {
     private val entities = mutableListOf<String>()
     fun add(name: String) = entities.add(name)
