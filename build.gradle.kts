@@ -6,7 +6,7 @@ val springBootVersion: String by extra
 
 buildscript {
     val kotlinVersion by extra { "1.1.51" }
-    val springBootVersion by extra { "2.0.0.M5" }
+    val springBootVersion by extra { "2.0.0.M6" }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")

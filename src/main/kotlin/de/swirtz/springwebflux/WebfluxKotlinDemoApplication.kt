@@ -1,6 +1,6 @@
 package de.swirtz.springwebflux
 
-import org.springframework.boot.SpringApplication
+import org.springframework.boot.runApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.RestController
  * and implements the Reactive Streams specification through the Reactor project.
  */
 @SpringBootApplication
-class SpringwebfluxKotlinDemoApplication
+class WebfluxKotlinDemoApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(SpringwebfluxKotlinDemoApplication::class.java, *args)
-
+    runApplication<WebfluxKotlinDemoApplication>(*args)
 }
 
 
