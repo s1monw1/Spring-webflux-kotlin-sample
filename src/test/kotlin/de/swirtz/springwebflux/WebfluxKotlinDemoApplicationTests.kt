@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
+import reactor.core.publisher.toMono
 import reactor.test.test
 
 @RunWith(SpringRunner::class)
@@ -25,8 +26,9 @@ class WebfluxKotlinDemoApplicationTests {
     @Before
     fun setup() {
         client = WebClient.create("http://localhost:$port")
-    }
 
+
+    }
 
     @Test
     fun getOnReactiveShouldReturnOk() {
